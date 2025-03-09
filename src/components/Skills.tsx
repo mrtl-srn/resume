@@ -1,16 +1,8 @@
-// filepath: /cv-website/cv-website/src/components/Skills.tsx
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
 const Skills: React.FC = () => {
-  const skills = [
-    'JavaScript',
-    'TypeScript',
-    'React',
-    'TailwindCSS',
-    'Node.js',
-    'Git',
-  ];
+  const skills = ['JavaScript', 'TypeScript', 'React', 'TailwindCSS', 'Node.js', 'Git'];
 
   return (
     <div className="my-4">

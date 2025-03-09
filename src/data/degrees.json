@@ -1,0 +1,23 @@
+[
+  {
+    "school": "LTP La Baronnerie",
+    "location": "Saint Sylvain d'Anjou",
+    "title": "BTS IRIS",
+    "start": 2001,
+    "end": 2003
+  },
+  {
+    "school": "LTP La Baronnerie",
+    "location": "Saint Sylvain d'Anjou",
+    "title": "BAC Génie Électronique",
+    "start": 1999,
+    "end": 2001
+  },
+  {
+    "school": "LTP La Baronnerie",
+    "location": "Saint Sylvain d'Anjou",
+    "title": "BEP Électronique",
+    "start": 1997,
+    "end": 1999
+  }
+]

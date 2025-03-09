@@ -1,0 +1,43 @@
+[
+  {
+    "company": "Alturing",
+    "location": "Angers",
+    "role": "Responsable Outils Support",
+    "start": 2007,
+    "isCurrentJob": true,
+    "responsibilities": [
+      "Conception et administration des outils internes",
+      "Développement de solutions web sur mesure pour les équipes de support",
+      "Automatisation des déploiements et maintenance des infrastructures",
+      "Formation et support technique aux équipes internes",
+      "Documentation et optimisation des processus"
+    ]
+  },
+  {
+    "company": "Telintrans",
+    "location": "Angers",
+    "role": "Technicien Support Informatique",
+    "start": 2005,
+    "end": 2007,
+    "responsibilities": [
+      "Fournir un support technique de niveau 1 pour résoudre les problèmes informatiques des utilisateurs",
+      "Diagnostiquer et résoudre les incidents liés aux systèmes d'exploitation, applications et équipements",
+      "Gérer les tickets d'incidents en utilisant des outils comme SM7, GLPI, JIRA",
+      "Escalader les problèmes complexes et assurer le suivi avec les équipes de niveau supérieur",
+      "Former les utilisateurs à l'utilisation des logiciels et équipements en ligne",
+      "Rédiger des guides et des procédures pour améliorer l'efficacité du support"
+    ]
+  },
+  {
+    "company": "ALPA",
+    "role": "Directeur de Centre de Loisirs, \"Le Bois de Pouillé\"",
+    "location": "Angers",
+    "start": 2000,
+    "end": 2005,
+    "responsibilities": [
+      "Gestion du personnel et coordination des activités pédagogiques",
+      "Planification et mise en œuvre du projet éducatif",
+      "Encadrement et gestion d'une équipe de 10 animateurs"
+    ]
+  }
+]
