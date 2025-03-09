@@ -1,5 +1,4 @@
 import { ReactTagBlock } from "../ui/ReactTagBlock";
-import { ReactCommentBlock } from "../ui/ReactCommentBlock";
 import ReactTag from "../ui/ReactTag";
 
 export type JobDetails = {
@@ -47,16 +46,6 @@ export function Job({ job }: JobProps) {
           />
         ))}
       </ReactTagBlock>
-
-      {/* <ReactCommentBlock>
-        {responsibilities.map((resp, idx) => (
-          <div key={idx} className="flex flex-row items-start gap-2">
-            <span className="text-blue-500 dark:text-pink-100 text-left">
-              {resp}
-            </span>
-          </div>
-        ))}
-      </ReactCommentBlock> */}
     </ReactTagBlock>
   );
 }

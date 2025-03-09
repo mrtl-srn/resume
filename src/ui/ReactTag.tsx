@@ -1,5 +1,5 @@
-import clsx from "clsx";
 import { Fragment } from "react";
+import { cn, isEmptyObject } from "../lib/utils";
 
 export type jsonProps =
   | string
@@ -15,6 +15,7 @@ export type ReactTagProps = {
   selfClosing?: boolean;
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   sticky?: boolean;
+  className?: string;
 };
 
 const isBoolean = (value: jsonProps): value is boolean =>
@@ -31,6 +32,7 @@ function ReactTag({
   selfClosing = false,
   as = "h1",
   sticky = false,
+  className = "",
 }: ReactTagProps) {
   const As = as;
 
@@ -52,13 +54,12 @@ function ReactTag({
     h6: "sticky top-30 z-10",
   };
 
-  const wrapperClasses = clsx(
+  const wrapperClasses = cn(
     "flex items-center gap-2 bg-gray-800 dark:bg-slate-800 mb-2",
     sizeClasses[as],
-    sticky && stickyOgreensets[as]
+    sticky && stickyOgreensets[as],
+    className
   );
-  const isEmptyObject = (obj: object): boolean =>
-    Object.keys(obj).length === 0 && obj.constructor === Object;
 
   return (
     <div className={wrapperClasses}>
