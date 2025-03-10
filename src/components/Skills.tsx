@@ -1,5 +1,7 @@
 import React from "react";
 import { useWindowSize } from "../lib/hooks";
+import ReactTag from "../ui/ReactTag";
+import { CodeZone } from "../ui/CodeZone";
 
 interface Skill {
   name: string;
@@ -66,10 +68,10 @@ const Skills: React.FC = () => {
   ];
 
   const getColorForLevel = (level: number): string => {
-    if (level >= 90) return "bg-green-500 dark:bg-green-600";
-    if (level >= 80) return "bg-green-400 dark:bg-green-500";
-    if (level >= 70) return "bg-green-300 dark:bg-green-400";
-    if (level >= 60) return "bg-green-200 dark:bg-green-300";
+    if (level >= 90) return "bg-green-500 dark:bg-blue-600";
+    if (level >= 80) return "bg-green-400 dark:bg-blue-700";
+    if (level >= 70) return "bg-green-300 dark:bg-blue-800";
+    if (level >= 60) return "bg-green-200 dark:bg-blue-900";
     return "bg-gray-200 dark:bg-gray-600";
   };
 
@@ -97,36 +99,37 @@ const Skills: React.FC = () => {
 
   return (
     <div className="my-4">
-      <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 dark:text-white">
-        Skills
-      </h2>
-      <div className="space-y-4 sm:space-y-6">
-        {skillCategories.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="space-y-2">
-            <h3 className="text-base sm:text-lg font-semibold dark:text-white ">
-              {category.name}
-            </h3>
-            <div className="space-y-1">
-              {category.skills.map((skill, skillIndex) => (
-                <div
-                  key={skillIndex}
-                  className="flex items-center gap-x-2 sm:gap-x-4 gap-y-1"
-                >
-                  <span className="font-normal min-w-20 sm:w-24 text-sm sm:text-base dark:text-white">
-                    {skill.name}
-                  </span>
-                  <div className="flex-grow grid grid-flow-col gap-[2px] sm:gap-1">
-                    {generateSquares(skill.level)}
+      <ReactTag size="2xl" name="Skills" selfClosing />
+
+      <CodeZone>
+        <div className="space-y-4 sm:space-y-6">
+          {skillCategories.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="space-y-2">
+              <h3 className="text-base sm:text-lg font-semibold dark:text-white ">
+                {category.name}
+              </h3>
+              <div className="space-y-1">
+                {category.skills.map((skill, skillIndex) => (
+                  <div
+                    key={skillIndex}
+                    className="flex items-center gap-x-2 sm:gap-x-4 gap-y-1"
+                  >
+                    <span className="font-normal min-w-20 sm:w-24 text-sm sm:text-base dark:text-white">
+                      {skill.name}
+                    </span>
+                    <div className="flex-grow grid grid-flow-col gap-[2px] sm:gap-1">
+                      {generateSquares(skill.level)}
+                    </div>
+                    <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 w-8 sm:w-12 text-right">
+                      {skill.level}%
+                    </span>
                   </div>
-                  <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 w-8 sm:w-12 text-right">
-                    {skill.level}%
-                  </span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </CodeZone>
     </div>
   );
 };

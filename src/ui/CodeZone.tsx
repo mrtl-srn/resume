@@ -12,7 +12,7 @@ export function CodeZone({ children, showGradient = false }: CodeZoneProps) {
         {children}
       </div>
       {showGradient && (
-        <div className="absolute right-0 top-0 bottom-0 w-12 pointer-events-none bg-gradient-to-l from-slate-900 to-transparent" />
+        <div className="absolute right-0 top-0 bottom-0 w-12 pointer-events-none bg-gradient-to-l from-slate-900 to-transparent rounded-r-md" />
       )}
     </div>
   );

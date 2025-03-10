@@ -31,5 +31,9 @@ export function Degree({ degree }: DegreeProps) {
     end,
   };
 
-  return <ReactTagBlock as="h3" name="Degree" properties={properties} />;
+  return (
+    <ReactTagBlock as="h2" name="Degree" properties={properties}>
+      <ReactTagBlock as="h3" name="School" properties={degree.school} />
+    </ReactTagBlock>
+  );
 }

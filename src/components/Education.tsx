@@ -1,6 +1,8 @@
 import { Degree, DegreeType } from "./Degree";
 import { ReactTagBlock } from "../ui/ReactTagBlock";
 import { groupBy } from "../lib/utils";
+import ReactTag from "../ui/ReactTag";
+import { CodeZone } from "../ui/CodeZone";
 
 export type EducationProps = {
   degrees: DegreeType[];
@@ -10,24 +12,17 @@ export function Education({ degrees }: EducationProps) {
   const bySchool = groupBy(degrees, (degree) => degree.school.name);
 
   return (
-    <ReactTagBlock as="h1" name="Education">
-      {Object.entries(bySchool).map(([, degrees], index) => {
-        const { location, name } = degrees[0].school;
+    <div className="relative">
+      <ReactTag size="2xl" name="Education" selfClosing />
 
-        return (
-          <ReactTagBlock
-            as="h2"
-            key={index}
-            name="School"
-            properties={{ name, location }}
-          >
-            {degrees.map((degree, index) => {
-              return <Degree key={index} degree={degree} />;
-            })}
-          </ReactTagBlock>
-        );
-      })}
-    </ReactTagBlock>
+      <CodeZone showGradient>
+        <ReactTagBlock as="h1" name="Degrees">
+          {degrees.map((degree, index) => {
+            return <Degree key={index} degree={degree} />;
+          })}
+        </ReactTagBlock>
+      </CodeZone>
+    </div>
   );
 }
 

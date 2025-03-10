@@ -70,7 +70,7 @@ function ReactTag({
 
         {closeTag && <span>/</span>}
 
-        <span className="text-pink-500 dark:text-pink-400">{name}</span>
+        <span className="text-pink-500 dark:text-pink-500">{name}</span>
 
         {!closeTag && !isEmptyObject(properties) && (
           <div className="inline-flex items-center gap-2 ml-2">

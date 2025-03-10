@@ -1,3 +1,5 @@
+import { CodeZone } from "../ui/CodeZone";
+import ReactTag from "../ui/ReactTag";
 import { ReactTagBlock } from "../ui/ReactTagBlock";
 import { Job, JobType } from "./Job";
 
@@ -7,10 +9,16 @@ export type ExperiencesProps = {
 
 export function Experience({ jobs }: ExperiencesProps) {
   return (
-    <ReactTagBlock as="h1" name="Experience">
-      {jobs.map((job, index) => {
-        return <Job key={index} job={job} />;
-      })}
-    </ReactTagBlock>
+    <div className="relative">
+      <ReactTag size="2xl" name="Experience" selfClosing />
+
+      <CodeZone showGradient>
+        <ReactTagBlock as="h1" name="Jobs">
+          {jobs.map((job, index) => {
+            return <Job key={index} job={job} />;
+          })}
+        </ReactTagBlock>
+      </CodeZone>
+    </div>
   );
 }
