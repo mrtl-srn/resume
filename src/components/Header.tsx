@@ -2,7 +2,6 @@ import React, { JSX } from "react";
 import { Mail, Linkedin, Phone, Github } from "lucide-react";
 import photo from "../assets/photo_msn.png";
 import ReactTag from "../ui/ReactTag";
-import { ReactTagBlock } from "../ui/ReactTagBlock";
 
 interface ContactItem {
   icon: JSX.Element;
