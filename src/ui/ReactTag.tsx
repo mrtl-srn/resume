@@ -14,6 +14,7 @@ export type ReactTagProps = {
   closeTag?: boolean;
   selfClosing?: boolean;
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  size?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl";
   sticky?: boolean;
   className?: string;
 };
@@ -31,21 +32,22 @@ function ReactTag({
   closeTag = false,
   selfClosing = false,
   as = "h1",
+  size = "base",
   sticky = false,
   className = "",
 }: ReactTagProps) {
   const As = as;
 
   const sizeClasses = {
-    h1: "text-base",
-    h2: "text-base",
-    h3: "text-base",
-    h4: "text-base",
-    h5: "text-base",
-    h6: "text-base",
+    xs: "text-xs",
+    sm: "text-sm",
+    base: "text-base",
+    lg: "text-lg",
+    xl: "text-xl",
+    "2xl": "text-2xl",
   };
 
-  const stickyOgreensets = {
+  const stickyOffsets = {
     h1: "sticky top-0 z-60",
     h2: "sticky top-6 z-50",
     h3: "sticky top-12 z-40",
@@ -56,8 +58,8 @@ function ReactTag({
 
   const wrapperClasses = cn(
     "flex items-center gap-2 bg-gray-800 dark:bg-slate-800 mb-2",
-    sizeClasses[as],
-    sticky && stickyOgreensets[as],
+    sizeClasses[size],
+    sticky && stickyOffsets[as],
     className
   );
 

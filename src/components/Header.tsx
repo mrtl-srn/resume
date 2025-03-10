@@ -2,6 +2,7 @@ import React, { JSX } from "react";
 import { Mail, Linkedin, Phone, Github } from "lucide-react";
 import photo from "../assets/photo_msn.png";
 import ReactTag from "../ui/ReactTag";
+import { ReactTagBlock } from "../ui/ReactTagBlock";
 
 interface ContactItem {
   icon: JSX.Element;
@@ -49,7 +50,7 @@ const Header: React.FC = () => {
             Martial Séron
           </h1>
           <h2 className="text-2xl text-pink-500 font-mono mb-6">
-            <ReactTag as="h1" name="FullstackDeveloper" />
+            <ReactTagBlock as="h1" size="2xl" name="FullstackDeveloper" />
           </h2>
 
           <p className="text-gray-600 dark:text-white mb-6 max-w-2xl">

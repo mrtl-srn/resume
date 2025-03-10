@@ -4,12 +4,14 @@ import ReactTag, { ReactTagProps } from "./ReactTag";
 export type ReactTagBlockProps = {
   name: string;
   as?: ReactTagProps["as"];
+  size?: ReactTagProps["size"];
   properties?: ReactTagProps["properties"];
   children?: React.ReactNode;
 };
 
 export function ReactTagBlock({
   as,
+  size,
   name,
   properties,
   children,
@@ -18,6 +20,7 @@ export function ReactTagBlock({
     <section className="relative">
       <ReactTag
         as={as}
+        size={size}
         sticky
         name={name}
         properties={properties}
