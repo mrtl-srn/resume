@@ -1,4 +1,5 @@
 import React from "react";
+import { useWindowSize } from "../lib/hooks";
 
 interface Skill {
   name: string;
@@ -11,6 +12,8 @@ interface SkillCategory {
 }
 
 const Skills: React.FC = () => {
+  const [width] = useWindowSize();
+
   const skillCategories: SkillCategory[] = [
     {
       name: "Languages",
@@ -72,14 +75,16 @@ const Skills: React.FC = () => {
 
   const generateSquares = (level: number) => {
     const squares = [];
-    const totalSquares = 50; // Number of squares per skill
+
+    const totalSquares = width < 1024 ? (width < 640 ? 20 : 25) : 50;
+
     const filledSquares = Math.floor((level / 100) * totalSquares);
 
     for (let i = 0; i < totalSquares; i++) {
       squares.push(
         <div
           key={i}
-          className={`w-3 h-3 rounded-xs ${
+          className={`w-2 h-2 sm:w-3 sm:h-3 rounded-xs ${
             i < filledSquares
               ? getColorForLevel(level)
               : "bg-gray-100 dark:bg-gray-700"
@@ -92,26 +97,28 @@ const Skills: React.FC = () => {
 
   return (
     <div className="my-4">
-      <h2 className="text-2xl font-bold mb-4 dark:text-white">Skills</h2>
-      <div className="space-y-6">
+      <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 dark:text-white">
+        Skills
+      </h2>
+      <div className="space-y-4 sm:space-y-6">
         {skillCategories.map((category, categoryIndex) => (
           <div key={categoryIndex} className="space-y-2">
-            <h3 className="text-lg font-semibold dark:text-white">
+            <h3 className="text-base sm:text-lg font-semibold dark:text-white ">
               {category.name}
             </h3>
             <div className="space-y-1">
               {category.skills.map((skill, skillIndex) => (
                 <div
                   key={skillIndex}
-                  className="flex items-center gap-x-4 gap-y-1"
+                  className="flex items-center gap-x-2 sm:gap-x-4 gap-y-1"
                 >
-                  <span className="font-normal w-24 dark:text-white">
+                  <span className="font-normal min-w-20 sm:w-24 text-sm sm:text-base dark:text-white">
                     {skill.name}
                   </span>
-                  <div className="flex-grow grid grid-flow-col gap-1">
+                  <div className="flex-grow grid grid-flow-col gap-[2px] sm:gap-1">
                     {generateSquares(skill.level)}
                   </div>
-                  <span className="text-sm text-gray-600 dark:text-gray-400 w-12 text-right">
+                  <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 w-8 sm:w-12 text-right">
                     {skill.level}%
                   </span>
                 </div>

@@ -4,7 +4,7 @@ import Header from "../components/Header";
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div
-      className={`min-h-screen flex flex-col dark:bg-slate-800 dark:text-white `}
+      className={`min-h-screen min-w-sm flex flex-col dark:bg-slate-800 dark:text-white `}
     >
       <Header />
       <main className="flex-grow container mx-auto p-4">

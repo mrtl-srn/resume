@@ -18,22 +18,24 @@ export function ReactTagBlock({
 }: ReactTagBlockProps) {
   return (
     <section className="relative">
-      <ReactTag
-        as={as}
-        size={size}
-        sticky
-        name={name}
-        properties={properties}
-        selfClosing={children === undefined}
-      />
-      {children && (
-        <>
-          <div className="space-y-6 border-l border-pink-200 dark:border-slate-700 pl-6">
-            {children}
-          </div>
-          <ReactTag as={as} name={name} closeTag />
-        </>
-      )}
+      <div className="whitespace-nowrap min-w-fit">
+        <ReactTag
+          as={as}
+          size={size}
+          sticky
+          name={name}
+          properties={properties}
+          selfClosing={children === undefined}
+        />
+        {children && (
+          <>
+            <div className="space-y-3 md:space-y-6 border-l border-pink-200 dark:border-slate-700 pl-3 md:pl-6">
+              {children}
+            </div>
+            <ReactTag as={as} name={name} closeTag />
+          </>
+        )}
+      </div>
     </section>
   );
 }

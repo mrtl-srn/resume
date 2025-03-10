@@ -57,7 +57,7 @@ function ReactTag({
   };
 
   const wrapperClasses = cn(
-    "flex items-center gap-2 bg-gray-800 dark:bg-slate-800 mb-2",
+    "flex items-center gap-2 mb-2",
     sizeClasses[size],
     sticky && stickyOffsets[as],
     className

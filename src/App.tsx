@@ -7,14 +7,20 @@ import Contact from "./components/Contact";
 import jobs from "./data/jobs.json";
 import degrees from "./data/degrees.json";
 import { Experience } from "./components/Experience";
+import { CodeZone } from "./ui/CodeZone";
 
 function App() {
   return (
     <MainLayout>
-      <Experience jobs={jobs} />
-      <Education degrees={degrees} />
-      <Skills />
-      <Contact />
+      <CodeZone showGradient>
+        <Experience jobs={jobs} />
+      </CodeZone>
+      <CodeZone showGradient>
+        <Education degrees={degrees} />
+      </CodeZone>
+      <CodeZone>
+        <Skills />
+      </CodeZone>
     </MainLayout>
   );
 }
