@@ -8,6 +8,7 @@ import degrees from "./data/degrees.json";
 import projects from "./data/projects.json";
 import { Experience } from "./components/Experience";
 import ProjectCarousel from "./components/ProjectCarousel";
+import Hobbies from "./components/Hobbies";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Education degrees={degrees} />
       <ProjectCarousel projects={projects} />
       <Skills />
+      <Hobbies />
     </MainLayout>
   );
 }

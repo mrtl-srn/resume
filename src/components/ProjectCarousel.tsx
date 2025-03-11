@@ -1,4 +1,3 @@
-import { useState, useRef, MouseEvent } from "react";
 import ProjectCard, { Project } from "../ui/ProjectCard";
 import ReactTag from "../ui/ReactTag";
 import { useSwipe } from "../lib/hooks";

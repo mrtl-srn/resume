@@ -1,6 +1,5 @@
 import { Degree, DegreeType } from "./Degree";
 import { ReactTagBlock } from "../ui/ReactTagBlock";
-import { groupBy } from "../lib/utils";
 import ReactTag from "../ui/ReactTag";
 import { CodeZone } from "../ui/CodeZone";
 
@@ -9,8 +8,6 @@ export type EducationProps = {
 };
 
 export function Education({ degrees }: EducationProps) {
-  const bySchool = groupBy(degrees, (degree) => degree.school.name);
-
   return (
     <div className="relative">
       <ReactTag size="2xl" name="Education" selfClosing />
