@@ -1,0 +1,32 @@
+{
+  "fullName": "Martial Séron",
+  "location": "Durtal (49), France",
+  "title": {
+    "role": "Developer",
+    "type": "fullstack"
+  },
+  "description": "Développeur Fullstack avec 18 ans d'expérience, passionné par l'optimisation des outils web et la résolution de problèmes complexes. Fort d'une grande autonomie et d'un excellent esprit d'équipe, je conçois et maintiens des solutions robustes.",
+  "photo": "../assets/photo_msn.png",
+  "contacts": [
+    {
+      "type": "email",
+      "text": "martial.seron@gmail.com",
+      "link": "mailto:martial.seron@gmail.com"
+    },
+    {
+      "type": "phone",
+      "text": "06 75 86 11 30",
+      "link": "tel:+33675861130"
+    },
+    {
+      "type": "linkedin",
+      "text": "LinkedIn",
+      "link": "https://www.linkedin.com/in/martial-seron/"
+    },
+    {
+      "type": "github",
+      "text": "GitHub",
+      "link": "https://github.com/mrtl-srn"
+    }
+  ]
+}

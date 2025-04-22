@@ -1,37 +1,56 @@
-import React, { JSX } from "react";
-import { Mail, Linkedin, Phone, Github } from "lucide-react";
-import photo from "../assets/photo_msn.png";
+import { useEffect, useState } from "react";
 import ReactTag from "../ui/ReactTag";
+import {
+  GithubIcon,
+  HouseIcon,
+  LinkedinIcon,
+  Mail,
+  MailIcon,
+  PhoneIcon,
+} from "lucide-react";
 
-interface ContactItem {
-  icon: JSX.Element;
+export type Profile = {
+  fullName: string;
+  title: {
+    role: string;
+    type: string;
+  };
+  photo: string;
+  description: string;
+  location: string;
+  contacts: ContactItem[];
+};
+
+export type ContactItem = {
+  type: string;
   text: string;
   link?: string;
-}
+};
 
-const Header: React.FC = () => {
-  const contactInfo: ContactItem[] = [
-    {
-      icon: <Mail className="w-4 h-4" />,
-      text: "martial.seron@gmail.com",
-      link: "mailto:martial.seron@gmail.com",
-    },
-    {
-      icon: <Phone className="w-4 h-4" />,
-      text: "06 75 86 11 30",
-      link: "tel:+33675861130",
-    },
-    {
-      icon: <Linkedin className="w-4 h-4" />,
-      text: "LinkedIn",
-      link: "https://www.linkedin.com/in/martial-seron/",
-    },
-    {
-      icon: <Github className="w-4 h-4" />,
-      text: "GitHub",
-      link: "https://github.com/mrtl-srn",
-    },
-  ];
+export type HeaderProps = {
+  profile: Profile;
+};
+
+const icons = {
+  email: <MailIcon className="w-4 h-4" />,
+  phone: <PhoneIcon className="w-4 h-4" />,
+  github: <GithubIcon className="w-4 h-4" />,
+  linkedin: <LinkedinIcon className="w-4 h-4" />,
+};
+
+export function Header({ profile }: HeaderProps) {
+  const { fullName, title, photo, description, location, contacts } = profile;
+  const { role, type } = title;
+
+  const [avatar, setAvatar] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const loadImage = async () => {
+      const image = await import(photo);
+      setAvatar(image.default);
+    };
+    loadImage();
+  }, [photo]);
 
   return (
     <header className="max-w-6xl mx-auto pt-12 px-4">
@@ -39,35 +58,36 @@ const Header: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
           <div className="shrink-0 rounded-full bg-gradient-to-br from-pink-500  to-blue-500 p-1">
             <img
-              src={photo}
-              alt="Martial Séron"
+              src={avatar}
+              alt={fullName}
               className="w-48 h-48 rounded-full object-cover"
             />
           </div>
 
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-2">
-              Martial Séron
+              {fullName}
             </h1>
             <ReactTag
               as="h1"
               size="2xl"
-              name="Developer"
+              name={role}
               selfClosing
               className="justify-center md:justify-start"
-              properties={{ type: "fullstack" }}
+              properties={{ type }}
             />
 
             <p className="text-gray-600 dark:text-white mb-6 max-w-2xl">
-              Développeur Fullstack avec 18 ans d'expérience, passionné par
-              l'optimisation des outils web et la résolution de problèmes
-              complexes. Fort d'une grande autonomie et d'un excellent esprit
-              d'équipe, je conçois et maintiens des solutions robustes en
-              Node.js et React.js.
+              {description}
             </p>
 
+            <div className="text-gray-600 dark:text-white mb-6 max-w-2xl flex items-center gap-2">
+              <HouseIcon className="w-4 h-4" />
+              {location}
+            </div>
+
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-              {contactInfo.map((item, index) =>
+              {contacts.map((item, index) =>
                 item.link ? (
                   <a
                     key={index}
@@ -80,7 +100,9 @@ const Header: React.FC = () => {
                         : undefined
                     }
                   >
-                    {item.icon}
+                    {icons[item.type as keyof typeof icons] || (
+                      <Mail className="w-4 h-4" />
+                    )}
                     <span>{item.text}</span>
                   </a>
                 ) : (
@@ -88,7 +110,9 @@ const Header: React.FC = () => {
                     key={index}
                     className="flex items-center gap-2 text-gray-600"
                   >
-                    {item.icon}
+                    {icons[item.type as keyof typeof icons] || (
+                      <Mail className="w-4 h-4" />
+                    )}
                     <span>{item.text}</span>
                   </div>
                 )
@@ -99,6 +123,4 @@ const Header: React.FC = () => {
       </div>
     </header>
   );
-};
-
-export default Header;
+}
