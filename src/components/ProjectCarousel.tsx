@@ -10,24 +10,25 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
   const containerRef = useSwipe();
 
   return (
-    <div className="carousel relative w-full">
+    <section>
       <ReactTag size="2xl" name="Projects" selfClosing />
-      <div
-        ref={containerRef}
-        className="flex overflow-x-auto gap-4 scrollbar-hide cursor-grab active:cursor-grabbing"
-        style={{
-          overflow: "auto",
-          whiteSpace: "nowrap",
-        }}
-      >
-        {projects.map((project, index) => (
-          <div key={index} className="w-5/12 flex-none">
-            <ProjectCard project={project} />
-          </div>
-        ))}
+
+      <div className="carousel relative w-full">
+        <div
+          ref={containerRef}
+          className="flex overflow-x-auto gap-4 scrollbar-hide cursor-grab active:cursor-grabbing"
+          style={{
+            overflow: "auto",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {projects.map((project, index) => (
+            <div key={index} className="w-5/12 flex-none">
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
-
-export default ProjectCarousel;

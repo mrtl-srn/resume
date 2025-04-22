@@ -1,27 +1,43 @@
-const Hobbies = () => {
-  const hobbies = ["Photography", "Reading", "Hiking", "Coding", "Gaming"];
+import * as LucideIcons from "lucide-react";
+import ReactTag from "../ui/ReactTag";
 
-  return (
-    <section className="space-y-4">
-      <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
-        <div className="p-6 pb-4 border-b">
-          <h2 className="text-2xl font-semibold">Hobbies & Interests</h2>
-        </div>
-        <div className="p-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {hobbies.map((hobby, index) => (
-              <div
-                key={index}
-                className="p-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors"
-              >
-                {hobby}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+export type Hobby = {
+  name: string;
+  icon: string;
 };
 
-export default Hobbies;
+export type HobbiesProps = {
+  hobbies: Hobby[];
+};
+
+export function Hobbies({ hobbies }: HobbiesProps) {
+  return (
+    <section>
+      <ReactTag size="2xl" name="HobbiesAndInterests" selfClosing />
+
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {hobbies.map((hobby) => {
+          const Icon = LucideIcons[
+            hobby.icon as keyof typeof LucideIcons
+          ] as React.FunctionComponent<any>;
+
+          return (
+            <li
+              key={hobby.name}
+              className="flex items-center gap-4 p-4 dark:bg-slate-900 rounded-lg"
+              aria-label={`Hobby: ${hobby.name}`}
+            >
+              <div className="text-blue-400 text-3xl flex-shrink-0">
+                {Icon ? <Icon /> : <LucideIcons.GitBranchIcon />}
+              </div>
+
+              <span className="text-lg font-medium text-neutral-100 capitalize">
+                {hobby.name}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Languages",
+    "skills": [
+      { "name": "JavaScript", "level": 95 },
+      { "name": "TypeScript", "level": 90 },
+      { "name": "PHP", "level": 70 },
+      { "name": "HTML", "level": 95 },
+      { "name": "CSS", "level": 90 }
+    ]
+  },
+  {
+    "name": "Frameworks",
+    "skills": [
+      { "name": "React.js", "level": 90 },
+      { "name": "Next.js", "level": 85 },
+      { "name": "Node.js", "level": 85 },
+      { "name": "Express.js", "level": 85 },
+      { "name": "Laravel", "level": 70 },
+      { "name": "TailwindCSS", "level": 85 }
+    ]
+  },
+  {
+    "name": "API",
+    "skills": [
+      { "name": "REST", "level": 95 },
+      { "name": "GraphQL", "level": 70 },
+      { "name": "OpenAPI", "level": 85 }
+    ]
+  },
+  {
+    "name": "Database",
+    "skills": [
+      { "name": "MongoDB", "level": 80 },
+      { "name": "PostgreSQL", "level": 75 },
+      { "name": "MariaDB", "level": 90 }
+    ]
+  },
+  {
+    "name": "DevOps",
+    "skills": [
+      { "name": "Linux", "level": 80 },
+      { "name": "Docker", "level": 75 },
+      { "name": "CI/CD", "level": 70 },
+      { "name": "K8S", "level": 50 }
+    ]
+  },
+  {
+    "name": "Others",
+    "skills": [
+      { "name": "Nginx", "level": 75 },
+      { "name": "Apache", "level": 75 },
+      { "name": "Git", "level": 85 },
+      { "name": "Jest", "level": 75 }
+    ]
+  }
+]

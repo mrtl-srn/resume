@@ -3,10 +3,15 @@ import Header from "../components/Header";
 
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className={`min-h-screen min-w-sm flex flex-col  dark:text-white `}>
+    <div
+      className={`min-h-screen min-w-sm flex flex-col space-y-20 dark:text-white `}
+    >
       <Header />
-      <main className="flex-grow container mx-auto p-4">
-        <div className="max-w-6xl mx-auto py-12 space-y-20">{children}</div>
+
+      <main className="flex-grow container mx-auto">
+        <div className="max-w-6xl mx-auto flex flex-col gap-y-20 mb-20">
+          {children}
+        </div>
       </main>
     </div>
   );

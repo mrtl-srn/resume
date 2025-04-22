@@ -9,18 +9,16 @@ export type EducationProps = {
 
 export function Education({ degrees }: EducationProps) {
   return (
-    <div className="relative">
+    <section>
       <ReactTag size="2xl" name="Education" selfClosing />
 
       <CodeZone showGradient>
         <ReactTagBlock as="h1" name="Degrees">
-          {degrees.map((degree, index) => {
-            return <Degree key={index} degree={degree} />;
-          })}
+          {degrees.map((degree, index) => (
+            <Degree key={index} degree={degree} />
+          ))}
         </ReactTagBlock>
       </CodeZone>
-    </div>
+    </section>
   );
 }
-
-export default Education;

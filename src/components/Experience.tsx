@@ -9,7 +9,7 @@ export type ExperiencesProps = {
 
 export function Experience({ jobs }: ExperiencesProps) {
   return (
-    <div className="relative">
+    <section>
       <ReactTag size="2xl" name="Experience" selfClosing />
 
       <CodeZone showGradient>
@@ -19,6 +19,6 @@ export function Experience({ jobs }: ExperiencesProps) {
           })}
         </ReactTagBlock>
       </CodeZone>
-    </div>
+    </section>
   );
 }

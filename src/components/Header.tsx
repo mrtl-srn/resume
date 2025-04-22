@@ -37,11 +37,11 @@ const Header: React.FC = () => {
     <header className="max-w-6xl mx-auto pt-12 px-4">
       <div className="flex-grow container mx-auto p-4">
         <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-          <div className="shrink-0">
+          <div className="shrink-0 rounded-full bg-gradient-to-br from-pink-500  to-blue-500 p-1">
             <img
               src={photo}
               alt="Martial Séron"
-              className="w-48 h-48 rounded-full object-cover border-4 border-pink-500 dark:border-pink-500"
+              className="w-48 h-48 rounded-full object-cover"
             />
           </div>
 

@@ -29,15 +29,26 @@
     ]
   },
   {
+    "company": "Logis des Jeunes de Provences",
+    "role": "Responsable informatique",
+    "location": "Cannes",
+    "start": 2004,
+    "end": 2005,
+    "responsibilities": [
+      "Gestion du parc informatique",
+      "Formation à l'informatique pour tous publics dans le cadre de l'Espace Public Numérique"
+    ]
+  },
+  {
     "company": "ALPA",
     "role": "Directeur de Centre de Loisirs, \"Le Bois de Pouillé\"",
     "location": "Angers",
     "start": 2000,
     "end": 2005,
     "responsibilities": [
-      "Gestion du personnel et coordination des activités pédagogiques",
+      "Encadrement et gestion d'une équipe de 18 animateurs",
       "Planification et mise en œuvre du projet éducatif",
-      "Encadrement et gestion d'une équipe de 10 animateurs"
+      "Coordination des activités pédagogiques"
     ]
   }
 ]

@@ -85,7 +85,7 @@ function ReactTag({
                   {showBoolean && (
                     <span
                       key={key}
-                      className="text-blue-500 dark:text-blue-400"
+                      className="text-blue-500 dark:text-cyan-300"
                     >{` ${key}`}</span>
                   )}
 
@@ -93,7 +93,7 @@ function ReactTag({
                     <span className="inline-flex flex-nowrap">
                       <span className="text-blue-500 dark:text-blue-400">{` ${key}=`}</span>
                       <span className="text-pink-500 dark:text-blue-400">{`{`}</span>
-                      <span className="text-green-500 dark:text-gray-200">
+                      <span className="text-green-500 dark:text-green-500">
                         {value}
                       </span>
                       <span className="text-pink-500 dark:text-blue-400">{`}`}</span>
@@ -104,7 +104,7 @@ function ReactTag({
                     <Fragment>
                       <span className="text-blue-500 dark:text-blue-400">{` ${key}=`}</span>
                       <span className="text-green-500 dark:text-blue-400">{`"`}</span>
-                      <span className="text-green-500 dark:text-gray-200">{`${value}`}</span>
+                      <span className="text-green-500 dark:text-amber-50">{`${value}`}</span>
                       <span className="text-green-500 dark:text-blue-400">{`"`}</span>
                     </Fragment>
                   )}
