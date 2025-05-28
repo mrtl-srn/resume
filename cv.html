@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Martial Séron</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 3mm !important;
+      }
+
+      body {
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        line-height: 1.3;
+        color: #2d3748;
+        background: white;
+        font-size: 9.5pt;
+      }
+
+      .container {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        background: white;
+        padding: 12mm;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #51a2ff;
+      }
+
+      .name {
+        font-size: 26pt;
+        font-weight: 500;
+        color: #51a2ff;
+        margin-bottom: 6px;
+      }
+
+      .title {
+        font-size: 13pt;
+        color: #1e293b;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-family: "Courier New", monospace;
+      }
+
+      .title::before {
+        content: "<";
+        color: #f6339a;
+      }
+
+      .title::after {
+        content: " />";
+        color: #f6339a;
+      }
+
+      .contact {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 8.5pt;
+        color: #4b5563;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .main-grid {
+        display: grid;
+        grid-template-columns: 1fr 230px;
+        gap: 18px;
+        margin-top: 16px;
+      }
+
+      .section {
+        margin-bottom: 16px;
+      }
+
+      .section-title {
+        font-size: 11pt;
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 8px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #e2e8f0;
+        font-family: "Courier New", monospace;
+      }
+
+      .section-title::before {
+        content: "<";
+        color: #f6339a;
+      }
+
+      .section-title::after {
+        content: " />";
+        color: #f6339a;
+      }
+
+      .profile {
+        font-size: 9.5pt;
+        line-height: 1.45;
+        text-align: center;
+        color: #374151;
+        margin-bottom: 16px;
+      }
+
+      .job {
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f1f5f9;
+      }
+
+      .job:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 5px;
+      }
+
+      .job-title {
+        font-size: 10pt;
+        font-weight: 600;
+        color: #1e293b;
+        line-height: 1.2;
+      }
+
+      .job-period {
+        font-size: 8pt;
+        color: #6b7280;
+        white-space: nowrap;
+        margin-left: 8px;
+        font-weight: 500;
+      }
+
+      .company {
+        font-size: 9pt;
+        color: #51a2ff;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+
+      .job-description {
+        font-size: 8.5pt;
+        color: #4b5563;
+        margin-bottom: 6px;
+        font-style: italic;
+      }
+
+      .job-actions {
+        list-style: none;
+      }
+
+      .job-actions li {
+        position: relative;
+        padding-left: 10px;
+        margin-bottom: 2px;
+        font-size: 8.5pt;
+        line-height: 1.35;
+        color: #374151;
+      }
+
+      .job-actions li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #f6339a;
+        font-size: 7pt;
+      }
+
+      .achievement {
+        font-weight: 500;
+        color: #f6339a;
+      }
+
+      .project {
+        background: linear-gradient(
+          135deg,
+          rgba(246, 51, 154, 0.05),
+          rgba(81, 162, 255, 0.05)
+        );
+        border-left: 3px solid #51a2ff;
+        padding: 8px 12px;
+        margin-bottom: 10px;
+        border-radius: 0 4px 4px 0;
+      }
+
+      .project-title {
+        font-size: 9pt;
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 3px;
+      }
+
+      .project-tech {
+        font-size: 7.5pt;
+        color: #f6339a;
+        margin-bottom: 4px;
+        font-family: "Courier New", monospace;
+      }
+
+      .project-desc {
+        font-size: 8pt;
+        color: #4b5563;
+        line-height: 1.3;
+      }
+
+      .project-link {
+        margin-top: 4px;
+        font-size: 8pt;
+        color: #1e293b;
+      }
+
+      .project-link > a,
+      .project-link > a:visited {
+        color: #f6339a;
+      }
+
+      .project-link > a:hover {
+        color: #850549;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .skill-category {
+        margin-bottom: 10px;
+      }
+
+      .skill-category h4 {
+        font-size: 9pt;
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 5px;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+      }
+
+      .skill-tag {
+        background: linear-gradient(
+          135deg,
+          rgba(246, 51, 154, 0.1),
+          rgba(81, 162, 255, 0.1)
+        );
+        color: #475569;
+        padding: 3px 6px;
+        border-radius: 10px;
+        font-size: 7.5pt;
+        border: 1px solid rgba(246, 51, 154, 0.2);
+      }
+
+      .skill-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 8pt;
+      }
+
+      .skill-name {
+        color: #374151;
+        font-weight: 500;
+      }
+
+      .skill-level {
+        font-size: 7pt;
+        color: #6b7280;
+        font-weight: 600;
+      }
+
+      .skill-bar {
+        width: 35px;
+        height: 2.5px;
+        background: #e5e7eb;
+        border-radius: 2px;
+        overflow: hidden;
+        margin-left: 6px;
+      }
+
+      .skill-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #f6339a, #51a2ff);
+        border-radius: 2px;
+      }
+
+      .education-item {
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #f8fafc;
+      }
+
+      .education-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      .degree-title {
+        font-size: 9pt;
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 2px;
+      }
+
+      .school-info {
+        font-size: 8pt;
+        color: #6b7280;
+        margin-bottom: 1px;
+      }
+
+      .education-period {
+        font-size: 7pt;
+        color: #9ca3af;
+      }
+
+      .interests {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .interest-tag {
+        background: linear-gradient(
+          135deg,
+          rgba(246, 51, 154, 0.1),
+          rgba(81, 162, 255, 0.1)
+        );
+        color: #475569;
+        padding: 3px 6px;
+        border-radius: 10px;
+        font-size: 7.5pt;
+        border: 1px solid rgba(246, 51, 154, 0.2);
+      }
+
+      .highlight {
+        color: #f6339a;
+        font-weight: 600;
+      }
+
+      .metric {
+        color: #51a2ff;
+        font-weight: 600;
+      }
+
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        .container {
+          box-shadow: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .section {
+          break-inside: avoid;
+        }
+
+        .main-grid {
+          grid-template-columns: 1fr 60mm;
+          gap: 8mm;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .main-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        .contact {
+          flex-direction: column;
+          gap: 6px;
+        }
+
+        .job-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="name">Martial Séron</h1>
+        <div class="title">Developer type="fullstack"</div>
+        <div class="contact">
+          <div class="contact-item">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-mail-icon lucide-mail"
+              >
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+              </svg>
+            </span>
+            <span>martial.seron@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-smartphone-icon lucide-smartphone"
+              >
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                <path d="M12 18h.01" /></svg
+            ></span>
+            <span>06 75 86 11 30</span>
+          </div>
+
+          <div class="contact-item">
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-map-pin-house-icon lucide-map-pin-house"
+              >
+                <path
+                  d="M15 22a1 1 0 0 1-1-1v-4a1 1 0 0 1 .445-.832l3-2a1 1 0 0 1 1.11 0l3 2A1 1 0 0 1 22 17v4a1 1 0 0 1-1 1z"
+                />
+                <path
+                  d="M18 10a8 8 0 0 0-16 0c0 4.993 5.539 10.193 7.399 11.799a1 1 0 0 0 .601.2"
+                />
+                <path d="M18 22v-3" />
+                <circle cx="10" cy="10" r="3" /></svg
+            ></span>
+            <span>Durtal (49)</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="profile">
+        Développeur Fullstack avec
+        <span class="highlight">18 ans d'expérience</span>
+        React/Node.js. Expert en architecture d'applications web modernes
+        sécurisées, gestion de projets techniques et optimisation des
+        performances. Capable de piloter le développement complet
+        d'applications, de la conception à la mise en production.
+        <span class="highlight"
+          >Spécialisé dans l'optimisation et la sécurisation</span
+        >
+        des outils web et la résolution de problèmes techniques complexes.
+      </div>
+
+      <div class="main-grid">
+        <div class="left-column">
+          <section class="section">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">
+                    Responsable Développement & Outils Support
+                  </div>
+                  <div class="company">Alturing - Angers</div>
+                </div>
+                <div class="job-period">2005 - Présent (20 ans)</div>
+              </div>
+              <div class="job-description">
+                Responsable du développement et de la maintenance des
+                applications internes et de l'automatisation des processus pour
+                un centre de services de 50+ personnes.
+              </div>
+              <ul class="job-actions">
+                <li>
+                  Développement d'un portail client interne React/Node.js
+                  utilisé quotidiennement par
+                  <span class="metric">400+ utilisateurs</span> partout dans le
+                  monde
+                </li>
+                <li>
+                  Conception et développement d'une API RESTful Nest.js pour
+                  automatiser et standardiser les communications vers les
+                  clients
+                </li>
+                <li>
+                  Création d'un wallboard React + API Node.js pour le suivi
+                  temps réel des appels client et du statut des techniciens
+                </li>
+                <li>
+                  Développement d'un dashboard de supervision (Next.js, NestJS,
+                  PostgreSQL, Redis) pour le suivi temps réel de la
+                  disponibilité de services critiques.
+                </li>
+                <li>Formation et encadrement technique de 2 développeurs</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">Responsable Informatique</div>
+                  <div class="company">
+                    Logis des Jeunes de Provences - Cannes
+                  </div>
+                </div>
+                <div class="job-period">2004 - 2005</div>
+              </div>
+              <ul class="job-actions">
+                <li>
+                  Administration complète du parc informatique (<span
+                    class="metric"
+                    >10 postes de travail</span
+                  >)
+                </li>
+                <li>Développement de solutions web pour la gestion interne</li>
+                <li>
+                  Formations quotidiennes à informatique de
+                  <span class="metric">groupes de 6 personnes</span> dans le
+                  cadre de l'Espace Public Numérique
+                </li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">
+                    Directeur de Centre & Coordinateur de Projets
+                  </div>
+                  <div class="company">
+                    CLSH \"Le bois de Pouillé\" (Association ALPA) - St Martin
+                    du Fouilloux
+                  </div>
+                </div>
+                <div class="job-period">2000 - 2005</div>
+              </div>
+              <ul class="job-actions">
+                <li>
+                  Gestion d'équipes de 8-17 personnes avec planification et
+                  coordination des activités
+                </li>
+                <li>
+                  Pilotage budgétaire et reporting auprès des instances
+                  dirigeantes
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="project">
+              <div class="project-title">LeasyPeasy</div>
+              <div class="project-tech">
+                Design (Figma) / Conception (Laravel + React)
+              </div>
+              <div class="project-desc">
+                Application de gestion locative pour les professionnels de
+                l'immobilier. Permet de gérer les contrats, les paiements et la
+                communication avec les clients. Intégration de fonctionnalités
+                avancées comme la signature électronique et la gestion des
+                documents.
+              </div>
+              <div class="project-link">
+                <a href="https://app.leasypeasy.fr"
+                  >https://app.leasypeasy.fr</a
+                >
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-title">Node module for GLPI REST API</div>
+              <div class="project-tech">Javascript</div>
+              <div class="project-desc">
+                Module Node.js pour interagir avec l'API REST de GLPI,
+                permettant la création, la mise à jour et la suppression
+                d'objets GLPI (tickets, utilisateurs, etc.) de manière sécurisée
+                et efficace. Utilisé dans plusieurs projets internes.
+              </div>
+              <div class="project-link">
+                <a href="https://github.com/mrtl-srn/glpi-api"
+                  >https://github.com/mrtl-srn/glpi-api</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="right-column">
+          <section class="section">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skill-category">
+              <h4>Langages de programmation</h4>
+
+              <div class="skill-tags">
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">Python</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>Frontend</h4>
+
+              <div class="skill-tags">
+                <span class="skill-tag">HTML5/CSS3</span>
+                <span class="skill-tag">SCSS/LESS</span>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">TailwindCSS</span>
+                <span class="skill-tag">Vite</span>
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Webpack</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>Backend</h4>
+
+              <div class="skill-tags">
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">Laravel</span>
+                <span class="skill-tag">REST</span>
+                <span class="skill-tag">SOAP</span>
+                <span class="skill-tag">GraphQL</span>
+                <span class="skill-tag">OpenAPI</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>Bases de données & Recherche</h4>
+
+              <div class="skill-tags">
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MariaDB/MySQL</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Elasticsearch</span>
+                <span class="skill-tag">Snowflake</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>DevOps & Infrastructure</h4>
+
+              <div class="skill-tags">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Nginx</span>
+                <span class="skill-tag">Apache</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">GitLab</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>Sécurité & Authentification</h4>
+
+              <div class="skill-tags">
+                <span class="skill-tag">OAuth2/OpenID Connect</span>
+                <span class="skill-tag">JWT</span>
+                <span class="skill-tag">SAML</span>
+                <span class="skill-tag">Helmet.js</span>
+                <span class="skill-tag">Sentry</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>Tests & Qualité</h4>
+
+              <div class="skill-tags">
+                <span class="skill-tag">Jest</span>
+                <span class="skill-tag">Mocha</span>
+                <span class="skill-tag">Sinon</span>
+                <span class="skill-tag">Puppeteer</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Outils & Méthodologies</h4>
+
+              <div class="skill-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">SCRUM</span>
+                <span class="skill-tag">SOLID</span>
+                <span class="skill-tag">GLPI</span>
+                <span class="skill-tag">QlikView</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Education</h2>
+
+            <div class="education-item">
+              <div class="degree-title">BTS Informatique et Réseaux</div>
+              <div class="school-info">LTP La Baronnerie</div>
+              <div class="education-period">2001 - 2003</div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Languages</h2>
+            <div class="skills-list">
+              <div class="skill-item">
+                <span class="skill-name">Français</span>
+                <span class="skill-level">Natif</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Anglais</span>
+                <span class="skill-level">Niveau C1 – autonome / avancé</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Interests</h2>
+            <div class="interests">
+              <span class="interest-tag">Coding</span>
+              <span class="interest-tag">Veille Tech</span>
+              <span class="interest-tag">Reading</span>
+              <span class="interest-tag">Video Games</span>
+              <span class="interest-tag">Board Games</span>
+              <span class="interest-tag">Cinema</span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
