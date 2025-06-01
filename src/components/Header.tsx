@@ -107,7 +107,7 @@ export function Header({ profile }: HeaderProps) {
               properties={{ type }}
             />
 
-            <div className="text-gray-600 dark:text-white mb-6 max-w-2xl text-md">
+            <div className="text-gray-600 dark:text-white mb-6 max-w-2xl">
               <MarkdownRenderer>{description}</MarkdownRenderer>
             </div>
           </div>

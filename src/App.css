@@ -23,3 +23,7 @@ mark {
   color: #f6339a;
   font-weight: bold;
 }
+
+p {
+  margin-bottom: 0.5rem;
+}
