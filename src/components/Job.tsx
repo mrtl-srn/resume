@@ -14,6 +14,7 @@ export type JobType = {
   role: string;
   start: number;
   end?: number;
+  description?: string;
   isCurrentJob?: boolean;
   responsibilities: string[];
   projects?: string[];
@@ -24,7 +25,16 @@ export type JobProps = {
 };
 
 export function Job({ job }: JobProps) {
-  const { company, start, end, isCurrentJob, role, responsibilities } = job;
+  const {
+    description,
+    company,
+    start,
+    end,
+    isCurrentJob,
+    role,
+    responsibilities,
+    projects,
+  } = job;
 
   const properties: JobDetails = {
     company,
@@ -34,18 +44,44 @@ export function Job({ job }: JobProps) {
   };
 
   return (
-    <ReactTagBlock as="h2" name="Job" properties={properties}>
-      <ReactTagBlock as="h3" name="Role" properties={{ name: role }}>
-        {responsibilities.map((resp, idx) => (
-          <ReactTag
-            as="h4"
-            selfClosing
-            key={idx}
-            name="Action"
-            properties={{ name: resp }}
-          />
-        ))}
-      </ReactTagBlock>
+    <ReactTagBlock
+      as="h2"
+      name="Job"
+      properties={{ name: role, ...properties }}
+    >
+      {description && (
+        <ReactTagBlock as="h3" name="Description">
+          {description}
+        </ReactTagBlock>
+      )}
+
+      {projects && (
+        <ReactTagBlock as="h3" name="LastProjects">
+          {projects?.map((project, idx) => (
+            <ReactTag
+              as="h4"
+              selfClosing
+              key={idx}
+              name="Project"
+              properties={{ description: project }}
+            />
+          ))}
+        </ReactTagBlock>
+      )}
+
+      {responsibilities && (
+        <ReactTagBlock as="h3" name="Roles">
+          {responsibilities.map((resp, idx) => (
+            <ReactTag
+              as="h4"
+              selfClosing
+              key={idx}
+              name="Role"
+              properties={{ name: resp }}
+            />
+          ))}
+        </ReactTagBlock>
+      )}
     </ReactTagBlock>
   );
 }

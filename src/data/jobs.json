@@ -2,11 +2,18 @@
   {
     "company": "Alturing",
     "location": "Angers",
-    "role": "Responsable Outils Support",
+    "role": "Responsable Développement & Outils Support",
     "start": 2007,
     "isCurrentJob": true,
+    "description": "Responsable du développement et de la maintenance des applications internes et de l'automatisation des processus pour un centre de services de 50+ personnes.",
+    "projects": [
+      "Développement d'un portail client interne React/Node.js utilisées quotidiennement par 400+ utilisateurs partout dans le monde",
+      "Conception et développement d'une API RESTful Nest.js pour automatiser et standardiser les communications vers les clients",
+      "Administration et intégration de GLPI pour la gestion des incidents, des demandes et du parc informatique"
+    ],
     "responsibilities": [
       "Conception et administration des outils internes",
+      "Formation et encadrement technique de 2 développeurs",
       "Développement de solutions web sur mesure pour les équipes de support",
       "Automatisation des déploiements et maintenance des infrastructures",
       "Formation et support technique aux équipes internes",
@@ -19,6 +26,10 @@
     "role": "Technicien Support Informatique",
     "start": 2005,
     "end": 2007,
+    "projects": [
+      "Conception d'un système de gestion des tickets d'incidents en PHP/MySQL",
+      "Développement d'une application de consultation des stastiques de performance des équipes hotline en PHP/MySQL"
+    ],
     "responsibilities": [
       "Fournir un support technique de niveau 1 pour résoudre les problèmes informatiques des utilisateurs",
       "Diagnostiquer et résoudre les incidents liés aux systèmes d'exploitation, applications et équipements",
@@ -35,20 +46,20 @@
     "start": 2004,
     "end": 2005,
     "responsibilities": [
-      "Gestion du parc informatique",
-      "Formation à l'informatique pour tous publics dans le cadre de l'Espace Public Numérique"
+      "Gestion d'un parc informatiaque de 10 postes de travail",
+      "Formations quotidiennes à informatique de groupes de 6 personnes dans le cadre de l'Espace Public Numérique"
     ]
   },
   {
     "company": "ALPA",
-    "role": "Directeur de Centre de Loisirs, \"Le Bois de Pouillé\"",
-    "location": "Angers",
+    "role": "Directeur de Centre & Coordinateur de Projets",
+    "location": "CLSH \"Le bois de Pouillé\" (Association ALPA)",
     "start": 2000,
     "end": 2005,
+    "description": "Management d'équipe et gestion de projets dans un contexte multi-contraintes.",
     "responsibilities": [
-      "Encadrement et gestion d'une équipe de 18 animateurs",
-      "Planification et mise en œuvre du projet éducatif",
-      "Coordination des activités pédagogiques"
+      "Gestion d'équipes de 8-17 personnes avec planification et coordination des activités",
+      "Pilotage budgétaire et reporting auprès des instances dirigeantes"
     ]
   }
 ]

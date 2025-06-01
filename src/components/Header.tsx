@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import ReactTag from "../ui/ReactTag";
 import {
   GithubIcon,
@@ -8,6 +7,7 @@ import {
   MailIcon,
   PhoneIcon,
 } from "lucide-react";
+import avatar from "../assets/photo_msn.png";
 
 export type Profile = {
   fullName: string;
@@ -39,18 +39,8 @@ const icons = {
 };
 
 export function Header({ profile }: HeaderProps) {
-  const { fullName, title, photo, description, location, contacts } = profile;
+  const { fullName, title, description, location, contacts } = profile;
   const { role, type } = title;
-
-  const [avatar, setAvatar] = useState<string | undefined>(undefined);
-
-  useEffect(() => {
-    const loadImage = async () => {
-      const image = await import(photo);
-      setAvatar(image.default);
-    };
-    loadImage();
-  }, [photo]);
 
   return (
     <header className="max-w-6xl mx-auto pt-12 px-4">

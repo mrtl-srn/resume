@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mrtl-srn.github.io/resume/",
+  "homepage": "https://mrtl-srn.github.io/resume",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -20,6 +20,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-modal": "^3.16.3",
+    "react-router-dom": "^7.6.1",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.12"
   },

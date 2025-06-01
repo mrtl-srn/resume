@@ -1,0 +1,74 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Filtre pour l'effet gravé avec glow rose -->
+    <filter id="engraved-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <!-- Glow rose -->
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feFlood flood-color="#ff69b4" flood-opacity="0.3"/>
+      <feComposite in2="coloredBlur" operator="in" result="glow"/>
+      
+      <!-- Ombre pour l'effet gravé -->
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000" flood-opacity="0.8" result="shadow"/>
+      
+      <!-- Combinaison des effets -->
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Filtre pour un glow plus intense -->
+    <filter id="intense-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#ff69b4" flood-opacity="0.4"/>
+      <feComposite in2="blur" operator="in" result="glow1"/>
+      
+      <feGaussianBlur stdDeviation="8" result="blur2"/>
+      <feFlood flood-color="#ff69b4" flood-opacity="0.2"/>
+      <feComposite in2="blur2" operator="in" result="glow2"/>
+      
+      <feMerge>
+        <feMergeNode in="glow2"/>
+        <feMergeNode in="glow1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Groupe principal avec rotation à 45 degrés -->
+  <g transform="rotate(45 50 50)">
+    <!-- Première ligne de caractères -->
+    <text x="15" y="30" 
+          font-family="Courier New, monospace" 
+          font-size="12" 
+          font-weight="bold" 
+          fill="#ff69b4" 
+          fill-opacity="0.15" 
+          filter="url(#engraved-glow)">
+      &lt;
+    </text>
+    
+    <text x="45" y="30" 
+          font-family="Courier New, monospace" 
+          font-size="12" 
+          font-weight="bold" 
+          fill="#ff69b4" 
+          fill-opacity="0.15" 
+          filter="url(#engraved-glow)">
+      /
+    </text>
+    
+    <text x="65" y="30" 
+          font-family="Courier New, monospace" 
+          font-size="12" 
+          font-weight="bold" 
+          fill="#ff69b4" 
+          fill-opacity="0.15" 
+          filter="url(#engraved-glow)">
+      &gt;
+    </text>
+    
+
+  </g>
+</svg>

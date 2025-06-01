@@ -1,27 +1,16 @@
 import "./App.css";
-import MainLayout from "./layouts/MainLayout";
-
-import { Experience } from "./components/Experience";
-import { Education } from "./components/Education";
-import { ProjectCarousel } from "./components/ProjectCarousel";
-import { Skills } from "./components/Skills";
-import { Hobbies } from "./components/Hobbies";
-
-import jobs from "./data/jobs.json";
-import degrees from "./data/degrees.json";
-import projects from "./data/projects.json";
-import skills from "./data/skills.json";
-import hobbies from "./data/hobbies.json";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HtmlResume from "./pages/HtmlResume";
+import Resume from "./pages/Resume";
 
 function App() {
   return (
-    <MainLayout>
-      <Skills skillCategories={skills} />
-      <Experience jobs={jobs} />
-      <ProjectCarousel projects={projects} />
-      <Education degrees={degrees} />
-      <Hobbies hobbies={hobbies} />
-    </MainLayout>
+    <BrowserRouter basename="/resume">
+      <Routes>
+        <Route path="/" element={<Resume />} />
+        <Route path="html" element={<HtmlResume />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

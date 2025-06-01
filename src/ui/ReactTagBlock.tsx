@@ -18,7 +18,7 @@ export function ReactTagBlock({
 }: ReactTagBlockProps) {
   return (
     <section className="relative">
-      <div className="whitespace-nowrap min-w-fit">
+      <div className="min-w-fit">
         <ReactTag
           as={as}
           size={size}
@@ -26,10 +26,11 @@ export function ReactTagBlock({
           name={name}
           properties={properties}
           selfClosing={children === undefined}
+          className="bg-slate-900"
         />
         {children && (
           <>
-            <div className="space-y-3 md:space-y-6 border-l border-pink-200 dark:border-slate-700 pl-3 md:pl-6">
+            <div className="font-mono space-y-3 md:space-y-6 border-l border-pink-200 dark:border-slate-700 pl-3 md:pl-6">
               {children}
             </div>
             <ReactTag as={as} name={name} closeTag />
