@@ -22,11 +22,9 @@ export function ReactTagBlock({
         <ReactTag
           as={as}
           size={size}
-          sticky
           name={name}
           properties={properties}
           selfClosing={children === undefined}
-          className="bg-slate-900"
         />
         {children && (
           <>
