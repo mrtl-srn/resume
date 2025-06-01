@@ -17,3 +17,9 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+
+mark {
+  background-color: transparent;
+  color: #f6339a;
+  font-weight: bold;
+}

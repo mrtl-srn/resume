@@ -14,7 +14,17 @@ export type ReactTagProps = {
   closeTag?: boolean;
   selfClosing?: boolean;
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-  size?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl";
+  size?:
+    | "xs"
+    | "sm"
+    | "base"
+    | "lg"
+    | "xl"
+    | "2xl"
+    | "3xl"
+    | "4xl"
+    | "5xl"
+    | "6xl";
   sticky?: boolean;
   className?: string;
 };
@@ -45,6 +55,10 @@ function ReactTag({
     lg: "text-lg",
     xl: "text-xl",
     "2xl": "text-2xl",
+    "3xl": "text-3xl",
+    "4xl": "text-4xl",
+    "5xl": "text-5xl",
+    "6xl": "text-6xl",
   };
 
   const stickyOffsets = {

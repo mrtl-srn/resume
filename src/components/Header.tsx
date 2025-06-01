@@ -8,6 +8,7 @@ import {
   PhoneIcon,
 } from "lucide-react";
 import avatar from "../assets/photo_msn.png";
+import MarkdownRenderer from "./MarkdownRenderer";
 
 export type Profile = {
   fullName: string;
@@ -32,6 +33,7 @@ export type HeaderProps = {
 };
 
 const icons = {
+  location: <HouseIcon className="w-4 h-4" />,
   email: <MailIcon className="w-4 h-4" />,
   phone: <PhoneIcon className="w-4 h-4" />,
   github: <GithubIcon className="w-4 h-4" />,
@@ -46,37 +48,22 @@ export function Header({ profile }: HeaderProps) {
     <header className="max-w-6xl mx-auto pt-12 px-4">
       <div className="flex-grow container mx-auto p-4">
         <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-          <div className="shrink-0 rounded-full bg-gradient-to-br from-pink-500  to-blue-500 p-1">
-            <img
-              src={avatar}
-              alt={fullName}
-              className="w-48 h-48 rounded-full object-cover"
-            />
-          </div>
+          <div className="flex flex-col items-start gap-2">
+            <div className="flex flex-col items-center">
+              <div className="shrink-0 rounded-full bg-gradient-to-br from-pink-500 to-blue-500 p-1">
+                <img
+                  src={avatar}
+                  alt={fullName}
+                  className="w-48 h-48 rounded-full object-cover"
+                />
+              </div>
 
-          <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-2">
-              {fullName}
-            </h1>
-            <ReactTag
-              as="h1"
-              size="2xl"
-              name={role}
-              selfClosing
-              className="justify-center md:justify-start"
-              properties={{ type }}
-            />
-
-            <p className="text-gray-600 dark:text-white mb-6 max-w-2xl">
-              {description}
-            </p>
-
-            <div className="text-gray-600 dark:text-white mb-6 max-w-2xl flex items-center gap-2">
-              <HouseIcon className="w-4 h-4" />
-              {location}
+              <h1 className="text-4xl font-medium text-gray-800 dark:text-blue-400 mt-4 text-center md:text-left">
+                {fullName}
+              </h1>
             </div>
 
-            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+            <div className="flex flex-col items-start gap-2">
               {contacts.map((item, index) =>
                 item.link ? (
                   <a
@@ -107,6 +94,21 @@ export function Header({ profile }: HeaderProps) {
                   </div>
                 )
               )}
+            </div>
+          </div>
+
+          <div className="flex-1 text-center md:text-left flex flex-col items-center md:items-start gap-4">
+            <ReactTag
+              as="h1"
+              size="5xl"
+              name={role}
+              selfClosing
+              className="justify-center md:justify-start"
+              properties={{ type }}
+            />
+
+            <div className="text-gray-600 dark:text-white mb-6 max-w-2xl text-md">
+              <MarkdownRenderer>{description}</MarkdownRenderer>
             </div>
           </div>
         </div>

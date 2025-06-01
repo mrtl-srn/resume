@@ -5,9 +5,14 @@
     "role": "Developer",
     "type": "fullstack"
   },
-  "description": "Développeur Fullstack avec 18 ans d'expérience React/Node.js. Expert en architecture d'applications web modernes sécurisées, gestion de projets techniques et optimisation des performances. Capable de piloter le développement complet d'applications, de la conception à la mise en production. Spécialisé dans l'optimisation et la sécurisation des outils web et la résolution de problèmes techniques complexes.",
+  "description": "Développeur passionné avec <mark>plus de 18 ans d'expérience</mark>, je conçois, développe et maintiens des applications web modernes, performantes et sécurisées. Spécialisé dans les technologies <mark>JavaScript/TypeScript</mark> (React, Node.js, Nest.js), je maîtrise l'ensemble de la chaîne de développement, de l'architecture logicielle à la mise en production, en passant par l'automatisation des déploiements et la gestion d'infrastructures conteneurisées.\n\nActuellement <mark>Responsable du développement</mark> au sein d'un centre de services de plus de 50 personnes, j'ai piloté la création de solutions utilisées quotidiennement par plusieurs centaines d'utilisateurs dans un contexte international.\n\nAu-delà de mes compétences techniques, je me distingue par une <mark>forte capacité d'écoute</mark>, un <mark>esprit d'analyse pragmatique</mark>, une <mark>grande autonomie</mark> et un goût marqué pour le <mark>travail collaboratif</mark>. J'ai à cœur de faire monter les équipes en compétences, de favoriser un environnement de travail bienveillant et de rechercher des solutions simples à des problèmes complexes.\n\nJe suis attaché à la <mark>qualité du code</mark>, aux <mark>bonnes pratiques</mark> et à la transmission de savoir. Mon approche est orientée résultats : <mark>livrer des outils fiables, évolutifs et bien documentés</mark>, tout en assurant un support réactif et pédagogique auprès des utilisateurs finaux.",
   "photo": "../assets/photo_msn.png",
   "contacts": [
+    {
+      "type": "location",
+      "text": "Durtal (49), France",
+      "link": "https://osm.org/go/eq~wzpU--?relation=167623"
+    },
     {
       "type": "email",
       "text": "martial.seron@gmail.com",
