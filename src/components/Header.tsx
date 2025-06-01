@@ -41,7 +41,7 @@ const icons = {
 };
 
 export function Header({ profile }: HeaderProps) {
-  const { fullName, title, description, location, contacts } = profile;
+  const { fullName, title, description, contacts } = profile;
   const { role, type } = title;
 
   return (
