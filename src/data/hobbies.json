@@ -1,6 +1,7 @@
 [
   { "name": "Coding", "icon": "Code" },
-  { "name": "Reading", "icon": "Book" },
+  { "name": "Reading", "icon": "BookOpen" },
+  { "name": "Hiking", "icon": "Mountain" },
   { "name": "Cinema", "icon": "Film" },
   { "name": "Video Games", "icon": "Gamepad2" },
   { "name": "Board Games", "icon": "Dices" }

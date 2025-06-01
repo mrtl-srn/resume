@@ -28,7 +28,8 @@
       "MariaDB",
       "Redis",
       "Elasticsearch",
-      "Snowflake"
+      "Snowflake",
+      "QlikView"
     ]
   },
   {
@@ -53,6 +54,6 @@
   },
   {
     "label": "Outils & Méthodologies",
-    "skills": ["Git", "SCRUM", "SOLID", "GLPI", "QlikView"]
+    "skills": ["Git", "SCRUM", "SOLID", "GLPI"]
   }
 ]

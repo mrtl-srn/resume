@@ -13,7 +13,7 @@ export type HobbiesProps = {
 export function Hobbies({ hobbies }: HobbiesProps) {
   return (
     <section>
-      <ReactTag size="2xl" name="HobbiesAndInterests" selfClosing />
+      <ReactTag size="2xl" name="Interests" selfClosing />
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {hobbies.map((hobby) => {
@@ -24,10 +24,10 @@ export function Hobbies({ hobbies }: HobbiesProps) {
           return (
             <li
               key={hobby.name}
-              className="flex items-center gap-4 p-4 dark:bg-slate-900 rounded-lg"
+              className="group/hobby flex items-center gap-4 p-4 dark:bg-slate-900 rounded-lg"
               aria-label={`Hobby: ${hobby.name}`}
             >
-              <div className="text-blue-400 text-3xl flex-shrink-0">
+              <div className="text-blue-400 text-3xl flex-shrink-0 group-hover/hobby:text-pink-500 transition-colors">
                 {Icon ? <Icon /> : <LucideIcons.GitBranchIcon />}
               </div>
 

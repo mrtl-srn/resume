@@ -8,7 +8,7 @@ export type CodeZoneProps = {
 export function CodeZone({ children, showGradient = false }: CodeZoneProps) {
   return (
     <div className="relative">
-      <div className="dark:bg-slate-900 px-3 md:px-6 py-3 rounded-md overflow-x-auto">
+      <div className="dark:bg-slate-900 px-3 md:px-6 py-3 rounded-md">
         {children}
       </div>
       {showGradient && (
