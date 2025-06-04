@@ -5,7 +5,7 @@ import rehypeSanitize, { Options as SanitizeOptions } from "rehype-sanitize";
 
 export const markOnlySchema: SanitizeOptions = {
   ...defaultSchema,
-  tagNames: ["mark", "p"],
+  tagNames: ["mark", "p", "hr"],
   attributes: { mark: [] },
 };
 

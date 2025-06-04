@@ -15,16 +15,14 @@ function ReactComment({
 }: ReactCommentProps) {
   return (
     <div className="flex items-start gap-2">
-      {start && <span className="text-pink-500 dark:text-pink-400">/**</span>}
+      {start && <span className="text-pink-400">/**</span>}
       {!start && !end && (
         <>
-          <span className="text-pink-500 dark:text-pink-400">
-            {singleLine ? "//" : "*"}{" "}
-          </span>
+          <span className="text-pink-400">{singleLine ? "//" : "*"} </span>
           <span className={`${className}`}>{children}</span>
         </>
       )}
-      {end && <span className="text-pink-500 dark:text-pink-400">*/</span>}
+      {end && <span className="text-pink-400">*/</span>}
     </div>
   );
 }

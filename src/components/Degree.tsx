@@ -1,4 +1,4 @@
-import { ReactTagBlock } from "../ui/ReactTagBlock";
+import IDECodeLine from "../ui/IDECodeLine";
 
 export type DegreeDetails = {
   title: string;
@@ -32,8 +32,8 @@ export function Degree({ degree }: DegreeProps) {
   };
 
   return (
-    <ReactTagBlock as="h2" name="Degree" properties={properties}>
-      <ReactTagBlock as="h3" name="School" properties={degree.school} />
-    </ReactTagBlock>
+    <IDECodeLine as="h2" tag="Degree" props={properties}>
+      <IDECodeLine as="h3" tag="School" props={degree.school} />
+    </IDECodeLine>
   );
 }

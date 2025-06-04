@@ -1,7 +1,6 @@
 import { Degree, DegreeType } from "./Degree";
-import { ReactTagBlock } from "../ui/ReactTagBlock";
-import ReactTag from "../ui/ReactTag";
 import { CodeZone } from "../ui/CodeZone";
+import IDECodeLine from "../ui/IDECodeLine";
 
 export type EducationProps = {
   degrees: DegreeType[];
@@ -10,14 +9,14 @@ export type EducationProps = {
 export function Education({ degrees }: EducationProps) {
   return (
     <section>
-      <ReactTag size="2xl" name="Education" selfClosing />
+      <IDECodeLine size="2xl" tag="Education" selfClosing />
 
       <CodeZone showGradient>
-        <ReactTagBlock as="h1" name="Degrees">
+        <IDECodeLine as="h1" tag="Degrees" indentSize={2}>
           {degrees.map((degree, index) => (
             <Degree key={index} degree={degree} />
           ))}
-        </ReactTagBlock>
+        </IDECodeLine>
       </CodeZone>
     </section>
   );

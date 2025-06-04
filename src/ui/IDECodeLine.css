@@ -1,0 +1,93 @@
+/* IDECodeLine.css */
+
+/* Classe stacked pour tous les breakpoints */
+.stacked .props-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.stacked .prop-item {
+  margin-left: var(--indent-size, 2ch);
+}
+
+/* Classes stacked responsive max-width */
+@media (max-width: 639px) {
+  .max-sm\:stacked .props-container:not(:empty) {
+    display: flex;
+    flex-direction: column;
+  }
+  .max-sm\:stacked .prop-item {
+    margin-left: var(--indent-size, 2ch);
+  }
+}
+
+@media (max-width: 767px) {
+  .max-md\:stacked .props-container:not(:empty) {
+    display: flex;
+    flex-direction: column;
+  }
+  .max-md\:stacked .prop-item {
+    margin-left: var(--indent-size, 2ch);
+  }
+}
+
+@media (max-width: 1023px) {
+  .max-lg\:stacked .props-container:not(:empty) {
+    display: flex;
+    flex-direction: column;
+  }
+  .max-lg\:stacked .prop-item {
+    margin-left: var(--indent-size, 2ch);
+  }
+}
+
+@media (max-width: 1279px) {
+  .max-xl\:stacked .props-container:not(:empty) {
+    display: flex;
+    flex-direction: column;
+  }
+  .max-xl\:stacked .prop-item {
+    margin-left: var(--indent-size, 2ch);
+  }
+}
+
+/* Classes stacked pour min-width */
+@media (min-width: 640px) {
+  .sm\:stacked .props-container:not(:empty) {
+    display: flex;
+    flex-direction: column;
+  }
+  .sm\:stacked .prop-item {
+    margin-left: var(--indent-size, 2ch);
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:stacked .props-container:not(:empty) {
+    display: flex;
+    flex-direction: column;
+  }
+  .md\:stacked .prop-item {
+    margin-left: var(--indent-size, 2ch);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:stacked .props-container:not(:empty) {
+    display: flex;
+    flex-direction: column;
+  }
+  .lg\:stacked .prop-item {
+    margin-left: var(--indent-size, 2ch);
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:stacked .props-container:not(:empty) {
+    display: flex;
+    flex-direction: column;
+  }
+  .xl\:stacked .prop-item {
+    margin-left: var(--indent-size, 2ch);
+  }
+}

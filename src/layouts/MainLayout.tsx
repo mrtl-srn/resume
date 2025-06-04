@@ -6,7 +6,7 @@ import profile from "../data/profile.json";
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div
-      className={`min-h-screen min-w-sm flex flex-col space-y-20 dark:text-white `}
+      className={`min-h-screen min-w-sm flex flex-col space-y-20 text-white `}
     >
       <Header profile={profile} />
 

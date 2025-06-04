@@ -1,5 +1,4 @@
-import { ReactTagBlock } from "../ui/ReactTagBlock";
-import ReactTag from "../ui/ReactTag";
+import IDECodeLine from "../ui/IDECodeLine";
 
 export type JobDetails = {
   company: string;
@@ -44,44 +43,45 @@ export function Job({ job }: JobProps) {
   };
 
   return (
-    <ReactTagBlock
+    <IDECodeLine
       as="h2"
-      name="Job"
-      properties={{ name: role, ...properties }}
+      tag="Job"
+      props={{ name: role, ...properties }}
+      className="max-lg:stacked"
     >
       {description && (
-        <ReactTagBlock as="h3" name="Description">
+        <IDECodeLine as="h3" tag="Description">
           {description}
-        </ReactTagBlock>
+        </IDECodeLine>
       )}
 
       {projects && (
-        <ReactTagBlock as="h3" name="LastProjects">
+        <IDECodeLine as="h3" tag="LastProjects">
           {projects?.map((project, idx) => (
-            <ReactTag
+            <IDECodeLine
               as="h4"
               selfClosing
               key={idx}
-              name="Project"
-              properties={{ description: project }}
+              tag="Project"
+              props={{ description: project }}
             />
           ))}
-        </ReactTagBlock>
+        </IDECodeLine>
       )}
 
       {responsibilities && (
-        <ReactTagBlock as="h3" name="Roles">
+        <IDECodeLine as="h3" tag="Roles">
           {responsibilities.map((resp, idx) => (
-            <ReactTag
+            <IDECodeLine
               as="h4"
               selfClosing
               key={idx}
-              name="Role"
-              properties={{ name: resp }}
+              tag="Role"
+              props={{ name: resp }}
             />
           ))}
-        </ReactTagBlock>
+        </IDECodeLine>
       )}
-    </ReactTagBlock>
+    </IDECodeLine>
   );
 }

@@ -27,3 +27,11 @@ body {
   user-select: none;
   white-space: nowrap;
 }
+
+.bg-skill-badge {
+  background: linear-gradient(
+    135deg,
+    rgba(246, 51, 154, 0.4),
+    rgba(81, 162, 255, 0.4)
+  );
+}

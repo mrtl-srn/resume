@@ -1,6 +1,6 @@
 import ProjectCard, { Project } from "../ui/ProjectCard";
-import ReactTag from "../ui/ReactTag";
 import { useSwipe } from "../lib/hooks";
+import IDECodeLine from "../ui/IDECodeLine";
 
 export type ProjectCarouselProps = {
   projects: Project[];
@@ -11,7 +11,7 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
 
   return (
     <section>
-      <ReactTag size="2xl" name="Projects" selfClosing />
+      <IDECodeLine size="2xl" tag="Projects" selfClosing />
 
       <div className="carousel relative w-full">
         <div

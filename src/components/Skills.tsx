@@ -1,6 +1,6 @@
-import ReactTag from "../ui/ReactTag";
 import { CodeZone } from "../ui/CodeZone";
-import { SkillBadge } from "../ui/SkillBadege";
+import { SkillBadge } from "../ui/SkillBadge";
+import IDECodeLine from "../ui/IDECodeLine";
 
 export type Skill = string;
 
@@ -16,13 +16,13 @@ export type SkillsProps = {
 export function Skills({ skillCategories }: SkillsProps) {
   return (
     <section>
-      <ReactTag size="2xl" name="Skills" selfClosing />
+      <IDECodeLine size="2xl" tag="Skills" selfClosing />
 
       <CodeZone>
         <div className="space-y-6">
           {skillCategories.map((category) => (
             <div key={category.label} className="space-y-2">
-              <h3 className="text-base sm:text-lg font-semibold dark:text-white">
+              <h3 className="text-base sm:text-lg font-semibold text-white">
                 {category.label}
               </h3>
               <div className="flex flex-wrap gap-2">

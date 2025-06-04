@@ -7,7 +7,7 @@
     "isCurrentJob": true,
     "description": "Responsable du développement et de la maintenance des applications internes et de l'automatisation des processus pour un centre de services de 50+ personnes.",
     "projects": [
-      "Développement d'un portail client interne React/Node.js utilisées quotidiennement par 400+ utilisateurs partout dans le monde",
+      "Développement d'un portail client interne React/Node.js utilisés quotidiennement par 400+ utilisateurs partout dans le monde",
       "Conception et développement d'une API RESTful Nest.js pour automatiser et standardiser les communications vers les clients",
       "Administration et intégration de GLPI pour la gestion des incidents, des demandes et du parc informatique"
     ],

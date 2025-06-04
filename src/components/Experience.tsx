@@ -1,6 +1,5 @@
 import { CodeZone } from "../ui/CodeZone";
-import ReactTag from "../ui/ReactTag";
-import { ReactTagBlock } from "../ui/ReactTagBlock";
+import IDECodeLine from "../ui/IDECodeLine";
 import { Job, JobType } from "./Job";
 
 export type ExperiencesProps = {
@@ -10,14 +9,14 @@ export type ExperiencesProps = {
 export function Experience({ jobs }: ExperiencesProps) {
   return (
     <section>
-      <ReactTag size="2xl" name="Experience" selfClosing />
+      <IDECodeLine size="2xl" tag="Experience" selfClosing />
 
       <CodeZone showGradient>
-        <ReactTagBlock as="h1" name="Jobs">
+        <IDECodeLine as="h1" tag="Jobs" indentSize={2}>
           {jobs.map((job, index) => {
             return <Job key={index} job={job} />;
           })}
-        </ReactTagBlock>
+        </IDECodeLine>
       </CodeZone>
     </section>
   );

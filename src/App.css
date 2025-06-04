@@ -27,3 +27,39 @@ mark {
 p {
   margin-bottom: 0.5rem;
 }
+hr {
+  width: 50%;
+  height: 1px;
+  border: none;
+  background: linear-gradient(to right, transparent, #51a2ff, transparent);
+  position: relative;
+  margin: 25px auto;
+  overflow: visible;
+}
+
+hr::before {
+  content: "<hr />";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #020618;
+  padding: 0 8px;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1;
+}
+
+hr::after {
+  content: "hr";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #020618;
+  padding: 0;
+  margin-left: -5px;
+  font-size: 16px;
+  color: #f6339a;
+  line-height: 1;
+}
