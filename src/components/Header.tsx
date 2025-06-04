@@ -1,4 +1,4 @@
-import avatar from "../assets/photo_msn.png";
+import avatar from "../assets/photo_msn.jpg";
 import MarkdownRenderer from "./MarkdownRenderer";
 import { Avatar } from "../ui/Avatar";
 import { FullName } from "../ui/FullName";
