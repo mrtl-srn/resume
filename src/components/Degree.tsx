@@ -32,8 +32,13 @@ export function Degree({ degree }: DegreeProps) {
   };
 
   return (
-    <IDECodeLine as="h2" tag="Degree" props={properties}>
-      <IDECodeLine as="h3" tag="School" props={degree.school} />
+    <IDECodeLine
+      as="h2"
+      tag="Degree"
+      props={properties}
+      className="max-md:stacked"
+    >
+      <IDECodeLine as="h3" tag="School" props={degree.school} selfClosing />
     </IDECodeLine>
   );
 }

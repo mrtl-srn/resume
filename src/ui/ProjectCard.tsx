@@ -13,8 +13,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="project bg-white shadow-md rounded-lg overflow-hidden h-full bg-gradient-to-tl from-slate-800 to-slate-900">
       <div className="p-4">
-        <h2 className="text-xl font-bold mb-2">{project.title}</h2>
-        <p className="text-gray-200 mb-4">{project.description}</p>
+        <h2 className="text-xl font-bold mb-2 text-wrap">{project.title}</h2>
+        <p className="text-gray-200 mb-4 text-wrap">{project.description}</p>
         <a
           href={project.link}
           className="text-blue-500 hover:underline"

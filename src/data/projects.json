@@ -1,5 +1,11 @@
 [
   {
+    "title": "LeasyPeasy",
+    "description": "Application for rental management. Private project",
+    "image": "https://placehold.co/150",
+    "link": "https://app.leasypeasy.fr"
+  },
+  {
     "title": "glpi-api",
     "description": "Node module for GLPI REST API",
     "image": "https://placehold.co/150",
@@ -10,11 +16,5 @@
     "description": "Chrome extension to easily convert text case",
     "image": "https://placehold.co/150",
     "link": "https://github.com/mrtl-srn/case-converter"
-  },
-  {
-    "title": "LeasyPeasy",
-    "description": "Application for rental management. Private project",
-    "image": "https://placehold.co/150",
-    "link": "https://app.leasypeasy.fr"
   }
 ]

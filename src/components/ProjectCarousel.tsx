@@ -11,7 +11,7 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
 
   return (
     <section>
-      <IDECodeLine size="2xl" tag="Projects" selfClosing />
+      <IDECodeLine size="2xl" tag="Projects" selfClosing className="mb-4" />
 
       <div className="carousel relative w-full">
         <div

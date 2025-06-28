@@ -9,7 +9,7 @@ export type EducationProps = {
 export function Education({ degrees }: EducationProps) {
   return (
     <section>
-      <IDECodeLine size="2xl" tag="Education" selfClosing />
+      <IDECodeLine size="2xl" tag="Education" selfClosing className="mb-4" />
 
       <CodeZone showGradient>
         <IDECodeLine as="h1" tag="Degrees" indentSize={2}>

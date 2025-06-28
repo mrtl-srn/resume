@@ -16,7 +16,7 @@ export type SkillsProps = {
 export function Skills({ skillCategories }: SkillsProps) {
   return (
     <section>
-      <IDECodeLine size="2xl" tag="Skills" selfClosing />
+      <IDECodeLine size="2xl" tag="Skills" selfClosing className="mb-4" />
 
       <CodeZone>
         <div className="space-y-6">

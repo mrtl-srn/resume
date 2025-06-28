@@ -9,7 +9,7 @@ export type ExperiencesProps = {
 export function Experience({ jobs }: ExperiencesProps) {
   return (
     <section>
-      <IDECodeLine size="2xl" tag="Experience" selfClosing />
+      <IDECodeLine size="2xl" tag="Experience" selfClosing className="mb-4" />
 
       <CodeZone showGradient>
         <IDECodeLine as="h1" tag="Jobs" indentSize={2}>

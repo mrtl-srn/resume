@@ -6,7 +6,7 @@ import {
   PhoneIcon,
 } from "lucide-react";
 
-const icons = {
+export const icons = {
   location: <HouseIcon className="w-4 h-4" />,
   email: <MailIcon className="w-4 h-4" />,
   phone: <PhoneIcon className="w-4 h-4" />,

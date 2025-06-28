@@ -10,15 +10,33 @@
       "SCSS/LESS",
       "React.js",
       "Next.js",
-      "TailwindCSS",
       "Vite",
+      "Webpack",
       "Figma",
-      "Webpack"
+      "TailwindCSS",
+      "Bootstrap",
+      "Material-UI"
     ]
   },
   {
     "label": "Backend",
-    "skills": ["Node.js", "Express.js", "Laravel", "REST", "GraphQL", "OpenAPI"]
+    "skills": [
+      "Node.js",
+      "Nest.js",
+      "Express.js",
+      "Fastify",
+      "Laravel",
+      "REST",
+      "GraphQL",
+      "OpenAPI",
+      "TanStack Query",
+      "Axios",
+      "Zod",
+      "Joi",
+      "Prisma",
+      "Sequelize",
+      "TypeORM"
+    ]
   },
   {
     "label": "Bases de données & Recherche",
@@ -29,7 +47,8 @@
       "Redis",
       "Elasticsearch",
       "Snowflake",
-      "QlikView"
+      "QlikView",
+      "BigQuery"
     ]
   },
   {
@@ -38,7 +57,16 @@
   },
   {
     "label": "Tests & Qualité",
-    "skills": ["Jest", "Mocha", "Sinon", "Puppeteer"]
+    "skills": [
+      "Jest",
+      "Mocha",
+      "Chai",
+      "Istanbul",
+      "Sinon",
+      "Cypress",
+      "Selenium",
+      "Puppeteer"
+    ]
   },
   {
     "label": "DevOps & Infrastructure",
@@ -49,11 +77,12 @@
       "Linux",
       "Nginx",
       "Apache",
-      "GitLab"
+      "GitLab",
+      "GCP"
     ]
   },
   {
     "label": "Outils & Méthodologies",
-    "skills": ["Git", "SCRUM", "SOLID", "GLPI"]
+    "skills": ["TDD", "BDD", "Agile/SCRUM", "SOLID", "Git", "GLPI"]
   }
 ]

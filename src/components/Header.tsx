@@ -4,6 +4,7 @@ import { Avatar } from "../ui/Avatar";
 import { FullName } from "../ui/FullName";
 import { Contacts } from "../ui/Contacts";
 import IDECodeLine from "../ui/IDECodeLine";
+import { CodeZone } from "../ui/CodeZone";
 
 export type Profile = {
   fullName: string;
@@ -32,9 +33,9 @@ export function Header({ profile }: HeaderProps) {
   const { role, type } = title;
 
   return (
-    <header className="max-w-6xl mx-auto pt-12 px-4">
+    <header className="max-w-6xl mx-auto pt-12 ">
       <div className="flex-grow container mx-auto">
-        <div className="w-full mb-8 text-center">
+        <div className="w-full mb-8 sm:text-center">
           <IDECodeLine
             tag={role}
             props={{ type }}
@@ -42,11 +43,22 @@ export function Header({ profile }: HeaderProps) {
             selfClosing
             as="h1"
             size="4xl"
-            className="justify-center md:justify-start max-md:stacked"
+            className="justify-center md:justify-start hidden md:block "
           />
+          <CodeZone className="md:hidden">
+            <IDECodeLine
+              tag={role}
+              props={{ type }}
+              indentSize={2}
+              selfClosing
+              as="h1"
+              size="3xl"
+              className="justify-center  stacked"
+            />
+          </CodeZone>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8  md:items-start">
+        <div className="flex-col md:flex-row gap-8 md:items-start hidden md:flex">
           <div className="flex md:flex-col items-center justify-around md:gap-2">
             <Avatar src={avatar} alt={fullName} />
 
@@ -61,6 +73,22 @@ export function Header({ profile }: HeaderProps) {
             <div className="text-white mb-6 max-w-2xl">
               <MarkdownRenderer>{description}</MarkdownRenderer>
             </div>
+          </div>
+        </div>
+
+        <div className="flex-col md:flex-row gap-8 md:items-start flex md:hidden">
+          <div className="flex flex-col items-center justify-around md:gap-2">
+            <Avatar src={avatar} alt={fullName} />
+
+            <div className="flex flex-col items-start gap-2">
+              <FullName fullName={fullName} />
+
+              <Contacts contacts={contacts} />
+            </div>
+          </div>
+
+          <div className="text-white text-left mb-6 ">
+            <MarkdownRenderer>{description}</MarkdownRenderer>
           </div>
         </div>
       </div>

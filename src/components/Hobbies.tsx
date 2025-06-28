@@ -13,7 +13,7 @@ export type HobbiesProps = {
 export function Hobbies({ hobbies }: HobbiesProps) {
   return (
     <section>
-      <IDECodeLine size="2xl" tag="Interests" selfClosing />
+      <IDECodeLine size="2xl" tag="Interests" selfClosing className="mb-4" />
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {hobbies.map((hobby) => {
