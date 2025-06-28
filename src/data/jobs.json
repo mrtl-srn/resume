@@ -8,12 +8,15 @@
     "description": "Responsable du développement et de la maintenance des applications internes et de l'automatisation des processus pour un centre de services de 50+ personnes.",
     "projects": [
       "Développement d'un portail client interne React/Node.js utilisés quotidiennement par 400+ utilisateurs partout dans le monde",
+      "Conception et mise en œuvre d'une base de connaissances interne (Next.js/Fastify/Elasticsearch) pour centraliser et rechercher rapidement les documents techniques et procédures.",
       "Conception et développement d'une API RESTful Nest.js pour automatiser et standardiser les communications vers les clients",
-      "Administration et intégration de GLPI pour la gestion des incidents, des demandes et du parc informatique"
+      "Création d'un wallboard React/Node.js pour le suivi en temps réel des appels clients et du statut des techniciens",
+      "Développement d'un tableau de bord de supervision (Next.js/NestJS) pour le suivi en temps réel de la disponibilité des services critiques.",
+      "Développement d'applications QlikView (BI) pour le suivi de l'état du parc informatique et la gestion des tickets clients."
     ],
     "responsibilities": [
       "Conception et administration des outils internes",
-      "Formation et encadrement technique de 2 développeurs",
+      "Formation et encadrement technique des développeurs",
       "Développement de solutions web sur mesure pour les équipes de support",
       "Automatisation des déploiements et maintenance des infrastructures",
       "Formation et support technique aux équipes internes",

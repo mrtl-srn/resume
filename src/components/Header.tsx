@@ -5,6 +5,7 @@ import { FullName } from "../ui/FullName";
 import { Contacts } from "../ui/Contacts";
 import IDECodeLine from "../ui/IDECodeLine";
 import { CodeZone } from "../ui/CodeZone";
+import { Language, Languages } from "./Languages";
 
 export type Profile = {
   fullName: string;
@@ -16,6 +17,7 @@ export type Profile = {
   description: string;
   location: string;
   contacts: ContactItem[];
+  languages: Language[];
 };
 
 export type ContactItem = {
@@ -29,7 +31,7 @@ export type HeaderProps = {
 };
 
 export function Header({ profile }: HeaderProps) {
-  const { fullName, title, description, contacts } = profile;
+  const { fullName, title, description, contacts, languages } = profile;
   const { role, type } = title;
 
   return (
@@ -66,6 +68,7 @@ export function Header({ profile }: HeaderProps) {
               <FullName fullName={fullName} />
 
               <Contacts contacts={contacts} />
+              <Languages languages={languages} />
             </div>
           </div>
 
@@ -84,6 +87,7 @@ export function Header({ profile }: HeaderProps) {
               <FullName fullName={fullName} />
 
               <Contacts contacts={contacts} />
+              <Languages languages={languages} />
             </div>
           </div>
 

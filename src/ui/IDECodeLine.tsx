@@ -21,7 +21,7 @@ interface CodeLineProps {
     | "6xl";
 }
 
-const IDECodeLine: React.FC<PropsWithChildren<CodeLineProps>> = ({
+export default function IDECodeLine({
   tag = "div",
   props = {},
   selfClosing = false,
@@ -30,7 +30,7 @@ const IDECodeLine: React.FC<PropsWithChildren<CodeLineProps>> = ({
   as = "h1",
   size = "base",
   children,
-}) => {
+}: PropsWithChildren<CodeLineProps>) {
   const As = as;
 
   const sizeClasses = {
@@ -46,8 +46,7 @@ const IDECodeLine: React.FC<PropsWithChildren<CodeLineProps>> = ({
     "6xl": "text-6xl",
   };
 
-  // Fonction pour formater les props avec couleurs (mémorisée)
-  const formattedPropsWithColors = useMemo(() => {
+  function formattedPropsWithColors() {
     return Object.entries(props)
       .map(([key, value], index) => {
         if (typeof value === "boolean") {
@@ -84,7 +83,7 @@ const IDECodeLine: React.FC<PropsWithChildren<CodeLineProps>> = ({
         return null;
       })
       .filter(Boolean);
-  }, [props]);
+  }
 
   return (
     <As
@@ -110,7 +109,7 @@ const IDECodeLine: React.FC<PropsWithChildren<CodeLineProps>> = ({
             role="list"
             aria-label="Attributs de la balise"
           >
-            {formattedPropsWithColors.map((prop, index) => (
+            {formattedPropsWithColors().map((prop, index) => (
               <span key={index} className="prop-item" role="listitem">
                 {prop}
               </span>
@@ -138,7 +137,7 @@ const IDECodeLine: React.FC<PropsWithChildren<CodeLineProps>> = ({
             role="list"
             aria-label="Attributs de la balise"
           >
-            {formattedPropsWithColors.map((prop, index) => (
+            {formattedPropsWithColors().map((prop, index) => (
               <span key={index} className="prop-item" role="listitem">
                 {prop}
               </span>
@@ -169,6 +168,4 @@ const IDECodeLine: React.FC<PropsWithChildren<CodeLineProps>> = ({
       )}
     </As>
   );
-};
-
-export default IDECodeLine;
+}

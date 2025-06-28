@@ -34,7 +34,7 @@ export function Contacts({
         <span>{item.text}</span>
       </a>
     ) : (
-      <div key={index} className="flex items-center gap-2 text-gray-600">
+      <div key={index} className="flex items-center gap-2 text-white">
         {icons[item.type as keyof typeof icons] || (
           <MailIcon className="w-4 h-4" />
         )}

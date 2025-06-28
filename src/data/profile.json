@@ -33,5 +33,9 @@
       "text": "GitHub",
       "link": "https://github.com/mrtl-srn"
     }
+  ],
+  "languages": [
+    { "name": "Français", "country": "FR", "level": "Langue maternelle" },
+    { "name": "English", "country": "US", "level": "C1 - Advanced" }
   ]
 }
